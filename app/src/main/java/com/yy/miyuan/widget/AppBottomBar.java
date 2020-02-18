@@ -29,6 +29,7 @@ import q.rorbin.badgeview.QBadgeView;
 /**
  * 作者：addison on 2020-02-18 21:49
  * 邮箱：gengxin@tech.youyuan.com
+ * 未读消息可拖拽
  */
 public class AppBottomBar extends BottomNavigationView {
     private static int[] sIcons = new int[]{
@@ -137,6 +138,28 @@ public class AppBottomBar extends BottomNavigationView {
                         .setGravityOffset(15,10,true)
                         .setOnDragStateChangedListener(null);
             }
+
+
+            /**此处是为了掩饰效果做了字符串判断，并不规范，可以根据需求自定义字段*/
+            if(tab.title.equals("相亲")){
+                new QBadgeView(getContext())
+                        .bindTarget(itemView)
+                        .setBadgeTextSize(13, true)
+                        .setBadgeBackgroundColor(0xffffeb3b).setBadgeTextColor(0xff000000)
+                        .stroke(0xff000000, 1, true)
+                        .setShowShadow(true)
+                        .setBadgeText("热")
+
+                        //offset可以根据控件的宽高 进行比例计算
+                        .setGravityOffset(8,4,true)
+                        .setOnDragStateChangedListener(new Badge.OnDragStateChangedListener() {
+                            @Override
+                            public void onDragStateChanged(int dragState, Badge badge, View targetView) {
+                                Toast.makeText(getContext(),"拖拽了",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+
             index++;
         }
 
