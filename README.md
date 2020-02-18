@@ -38,6 +38,8 @@ public @interface FragmentDestination {
 将生成的JSON文件进行读取解析，并生成对应的javabean
 
 
-##NavGraphBuilder
+
+##  NavGraphBuilder
+
 
 顾名思义将解析的Destination数据交给NavController处理 动态生成对应的Destination	
