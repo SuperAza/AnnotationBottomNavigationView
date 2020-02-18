@@ -9,7 +9,7 @@
 
 ##  效果图
 
-<img src="(https://user-images.githubusercontent.com/30682550/74759818-5876e800-52b4-11ea-9bd4-41ab2c1c45b7.png" width="70%" height="70%">
+![image_1](https://user-images.githubusercontent.com/30682550/74759818-5876e800-52b4-11ea-9bd4-41ab2c1c45b7.png)
 
 
 ##  FixFragmentNavigator
