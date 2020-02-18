@@ -20,11 +20,17 @@ public @interface FragmentDestination {
 ```
 自定义两种Destination注解`ActivityDestination`和`FragmentDestination` 并扩展自定义属性，举个例子是否需要登录拦截`needLogin`,`pageUrl`相当于隐式意图，主要用户deepLink赋值
 
+
 ##NavProcessor
+
 注解解析器，将注解自定义属性解析 并封装成JavaBean，以JSON形式写入到assets中
 
+
 ##AppConfig
+
 将生成的JSON文件进行读取解析，并生成对应的javabean
 
+
 ##NavGraphBuilder
+
 顾名思义将解析的Destination数据交给NavController处理 动态生成对应的Destination	
